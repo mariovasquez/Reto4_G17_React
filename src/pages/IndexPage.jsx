@@ -1,6 +1,7 @@
 import Hero from '../components/index/Hero';
 import News from '../components/index/News';
 import Featured from '../components/index/Featured';
+import Footer from '../components/sections/Footer';
 
 const IndexPage = () => {
 
@@ -61,6 +62,7 @@ const IndexPage = () => {
                 </div>
             </section>
             <News />
+            <Footer/>
         </>
     );
 }
