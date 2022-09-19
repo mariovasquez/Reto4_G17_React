@@ -6,12 +6,12 @@
         align-items: center;
         justify-content: center;
         padding: 1rem 0;
-        gap: 1rem;
     }
     &__title{
         font-size: 1.5rem;
+        font-weight: 900;
         position: relative;
-        color: white;
+        color: var(--primary-text-color);
 
         &::before{
             content: "";
@@ -34,7 +34,7 @@
         padding: 2rem;
         width: 960px;
         text-align: justify;
-        gap: 1rem;
+        gap: 2rem;
         align-items: center;
         background-color: var(--tertiary-text-color);
         border-radius: var(--primary-border-radius);
@@ -49,6 +49,13 @@
         margin: 0;
         padding: 0;
         max-width: 100%;
+        border-radius: var(--primary-border-radius);
+        box-shadow: 0 0 0.5rem 0.125rem rgba(0, 0, 0, 0.48);
+        transition: transform 0.25s ease-in-out;
+
+        &:hover{
+            transform: scale(1.01);
+        }
 
         &--cambio-d{
             display:none;
