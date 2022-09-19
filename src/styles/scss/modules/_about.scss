@@ -52,6 +52,8 @@
         border-radius: var(--primary-border-radius);
         box-shadow: 0 0 0.5rem 0.125rem rgba(0, 0, 0, 0.48);
         transition: transform 0.25s ease-in-out;
+        width: 300px;
+        height: 300px;
 
         &:hover{
             transform: scale(1.01);
@@ -65,36 +67,39 @@
     &__paragraph{
         color: var(--primary-text-color);
         max-width: 100%;
+        font-size: 0.85rem;
     }
 }
 
-@media(min-width:768px){
+@media(min-width:1920px){
+    .about{
+        &__paragraph{
+            font-size: 1rem;
+        }
+        &__img{
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
 
+@media(max-width:768px){
     .about{
         &__title{
-            font-size: 2rem;
+            display: none;
         }
-        &__subtitle{
-            font-size: 1.5rem;
+        &__paragraph{
+            font-size: 0.65rem;
         }
-    
-        // &__text{
-        //     max-width: var(--max-width-form);
-        // }
         &__img{
-            max-width: 480px;
+            width: 200px;
+            height: 200px;
         }
-    }
-    
-}
-
-@media(min-width:1008px){
-    .about__img--cambio{
-        &-d{
-            display:block;
-        }
-        &-m{
-            display:none;
+        &__text{
+            flex-direction: column;
+            max-width: 360px;
+            padding: 0.5rem;
+            gap: 0;
         }
     }
 }

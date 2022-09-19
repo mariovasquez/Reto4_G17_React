@@ -10,6 +10,7 @@
         align-items: center;
         animation: fadeBackground 6s infinite ;
         background-color: var(--tertiary-shadow-color);
+        max-width: 100%;
     }
 
     &--slider{
