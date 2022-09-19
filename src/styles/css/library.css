@@ -1,16 +1,16 @@
 .about__info {
-  max-width: var(--max-width-container);
+  width: 960px;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-theme-color);
   padding: 1rem 0;
   gap: 1rem;
 }
 .about__title {
   font-size: 1.5rem;
   position: relative;
+  color: white;
 }
 .about__title::before {
   content: "";
@@ -24,12 +24,23 @@
 }
 .about__subtitle {
   font-size: 1.125rem;
+  color: var(--primary-text-color);
 }
 .about__text {
+  display: flex;
   margin: 0;
-  padding: 1rem;
-  max-width: 100%;
+  padding: 2rem;
+  width: 960px;
   text-align: justify;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--tertiary-text-color);
+  border-radius: var(--primary-border-radius);
+  box-shadow: 0 0.5rem 1rem 0.25rem rgba(0, 0, 0, 0.48);
+}
+.about__text--container {
+  display: flex;
+  flex-direction: column;
 }
 .about__img {
   margin: 0;
@@ -40,6 +51,7 @@
   display: none;
 }
 .about__paragraph {
+  color: var(--primary-text-color);
   max-width: 100%;
 }
 
@@ -49,9 +61,6 @@
   }
   .about__subtitle {
     font-size: 1.5rem;
-  }
-  .about__text {
-    max-width: var(--max-width-form);
   }
   .about__img {
     max-width: 480px;
@@ -157,6 +166,17 @@
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes fadeBackground {
+  0% {
+    background: var(--secondary-highlight-color);
+  }
+  50% {
+    background: var(--tertiary-highlight-color);
+  }
+  100% {
+    background: var(--secondary-highlight-color);
   }
 }
 .button {
@@ -645,6 +665,8 @@
   flex-direction: column;
   padding-top: 7rem;
   align-items: center;
+  animation: fadeBackground 6s infinite;
+  background-color: var(--tertiary-shadow-color);
 }
 .section--slider {
   width: 100%;
@@ -1021,7 +1043,12 @@
   --tertiary-text-color: #fff;
   --primary-shadow-color: #605f5fe0;
   --secondary-shadow-color: #0002;
+  --tertiary-shadow-color: rgb(239, 239, 239);
+  --quaternary-shadow-color: rgb(170, 167, 167);
   --primary-highlight-color: #0099ff;
+  --secondary-highlight-color: #40cfff;
+  --tertiary-highlight-color: #2499c7;
+  --reverse-secondary-highlight-color: #42ffd3;
   --primary-font-family: "Roboto";
   --reverse-primary-shadow-color: #42464f;
   --primary-button-color: #BE1818;
