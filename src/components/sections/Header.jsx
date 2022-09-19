@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 import AboutPage from "../../pages/AbouPage";
 import IndexPage from "../../pages/IndexPage";
@@ -19,6 +19,12 @@ const Header = ({ logo }) => {
         body.classList.toggle("body--dark");
         const btnSwitch = document.querySelector('.switch');
         btnSwitch.classList.toggle("active");
+
+        if (body.classList.contains('body--dark')) {
+            localStorage.setItem('darkMode', true);
+        } else {
+            localStorage.setItem('darkMode', false);
+        }
     };
 
     document.addEventListener('scroll', documentScroll);
@@ -30,6 +36,18 @@ const Header = ({ logo }) => {
     const closeMenu = () => {
         headerNav.current.classList.remove('nav--open');
     };
+
+    useEffect(() => {
+        if (localStorage.getItem('darkMode') === 'true' || localStorage.getItem('darkMode') === null) {
+            document.querySelector('.body').classList.add('body--dark');
+            const btnSwitch = document.querySelector('.switch');
+            btnSwitch.classList.add("active");
+        } else {
+            document.querySelector('.body').classList.remove('body--dark');
+            const btnSwitch = document.querySelector('.switch');
+            btnSwitch.classList.remove("active");
+        }
+    }, []);
 
     return (
         <BrowserRouter>
