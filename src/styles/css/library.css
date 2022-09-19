@@ -223,6 +223,7 @@
   color: white;
   font-size: 1.25rem;
   border: 1px solid var(--tertiary-theme-color);
+  transform: scale(0.9);
 }
 .button-text:hover {
   background: white;
@@ -248,6 +249,7 @@
   font-size: 1.25rem;
   border: 1px solid #3B3B42;
   max-width: 50%;
+  transform: scale(0.9);
 }
 .button-input:hover {
   color: white;
@@ -406,6 +408,7 @@
   display: flex;
   justify-content: center;
   align-items: left;
+  max-width: 100%;
 }
 .footer__img {
   width: 200px;
@@ -457,10 +460,25 @@
 
 @media (max-width: 768px) {
   .footer__row {
-    width: 90%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0px;
+  }
+  .footer__section {
+    box-sizing: border-box;
+    padding-left: 0.25rem;
+  }
+  .footer__list {
+    max-width: 100%;
+  }
+  .footer__logo {
+    margin: 0;
+  }
+  .footer__buttons {
+    max-width: 350px;
+  }
+  .footer__paragraph {
+    max-width: 100%;
   }
 }
 .form {

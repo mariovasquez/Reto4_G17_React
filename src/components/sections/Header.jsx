@@ -23,6 +23,14 @@ const Header = ({ logo }) => {
 
     document.addEventListener('scroll', documentScroll);
 
+    const openMenu = () => {
+        headerNav.current.classList.toggle('nav--open');
+    };
+
+    const closeMenu = () => {
+        headerNav.current.classList.remove('nav--open');
+    };
+
     return (
         <BrowserRouter>
             <header className="header" ref={header}>
@@ -31,7 +39,7 @@ const Header = ({ logo }) => {
                         <Link to='/'>
                             <img src={logo} alt="Concierto" width="100" height="100" className="nav__logo" />
                         </Link>
-                        <button className="nav__action nav__action--menu" id="navActionMenu">
+                        <button className="nav__action nav__action--menu" id="navActionMenu" onClick={openMenu}>
                             <i className="bi bi-list nav__icon"></i>
                         </button>
                         <ul className="menu menu--header" ref={headerNavMenuLinkList}>
@@ -54,7 +62,7 @@ const Header = ({ logo }) => {
                                 <span className="nav_span"><i className="bi bi-brightness-high"></i></span>
                                 <span className="nav_span"><i className="bi bi-moon-stars"></i></span>
                             </button>
-                            <li className="nav__action nav__action--close" id="navActionClose">
+                            <li className="nav__action nav__action--close" id="navActionClose" onClick={closeMenu}>
                                 <i className="bi bi-x-circle"></i>
                             </li>
                         </ul>

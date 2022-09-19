@@ -44,6 +44,8 @@
         display: flex;
         justify-content: center;
         align-items: left;
+        max-width: 100%;
+
     }
 
     &__img {
@@ -105,12 +107,30 @@
 @media(max-width: 768px){
     .footer{
         &__row{
-            width: 90%;
             grid-template-columns: repeat(1, 1fr);
             grid-gap:30px;
             padding: 35px 0px;
         }
+        &__section {
+            box-sizing: border-box;
+            padding-left: 0.25rem;
+        }
 
+        &__list {
+            max-width: 100%;
+        }
         
+
+        &__logo{
+            margin: 0;
+        }
+
+        &__buttons {
+            max-width: 350px;
+        }
+
+        &__paragraph {
+            max-width: 100%;
+        }
     }
 }
