@@ -1,12 +1,9 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useEffect, useRef, useState } from 'react';
-import SliderNewReleasesAlbums from './featured/SliderNewReleasesAlbums';
-import SliderPopularAlbums from './featured/SliderPopularAlbums';
+import SliderNewReleasesAlbums from './featured/SliderFeaturedAlbums';
 const Featured = () => {
     const newReleases = useRef();
     const popular = useRef();
@@ -28,17 +25,29 @@ const Featured = () => {
     };
 
     // Fetch JSON
-    const [albumes, setAlbumes] = useState([]);
+    const [newReleasesAlbumsData, setNewReleasesAlbumsData] = useState([]);
+    const [popularAlbumsData, setPopularAlbumsData] = useState([]);
 
     useEffect(() => {
-        getAlbums()
+        getNewReleasesAlbumsData("https://raw.githubusercontent.com/mariovasquez/Reto4_G17_React/develop/src/json/newReleasesAlbums.json");
+        getPopularAlbumsData("https://raw.githubusercontent.com/mariovasquez/Reto4_G17_React/develop/src/json/popularAlbums.json");
     }, [])
 
-    const getAlbums = async () => {
+    const getNewReleasesAlbumsData = async (url) => {
         try {
-            const response = await fetch('https://mariovasquez.github.io/Reto4_G17_React/src/json/albums.json');
+            const response = await fetch(url);
             const data = await response.json();
-            setAlbumes(data);
+            setNewReleasesAlbumsData(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const getPopularAlbumsData = async (url) => {
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            setPopularAlbumsData(data);
         } catch (error) {
             console.log(error);
         }
@@ -54,11 +63,13 @@ const Featured = () => {
                 </div>
                 <div className="container--featured-albums" id="newReleasesAlbums" ref={newReleasesAlbums}>
                     <SliderNewReleasesAlbums
-                        albums={albumes[0]}
+                        albums={newReleasesAlbumsData}
                     />
                 </div>
                 <div className="container--featured-albums container--featured-albums-disabled" id="popularAlbums" ref={popularAlbums}>
-                    <SliderPopularAlbums />
+                <SliderNewReleasesAlbums
+                        albums={popularAlbumsData}
+                    />
                 </div>
 
             </div>

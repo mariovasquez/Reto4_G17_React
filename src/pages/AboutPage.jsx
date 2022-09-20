@@ -2,11 +2,6 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Mo
 
 
 const AboutPage = () => {
-    // const header = document.querySelector('.header');
-    // const headerAbout = () => {
-    //     header.classList.add('header--scroll');
-    // };
-    // headerAbout();
     return (
         <>
             <article className="section section--about">
