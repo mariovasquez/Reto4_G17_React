@@ -1,4 +1,5 @@
 # [VAO Music](https://reto4-g17.netlify.app/)
+<img src="https://i.postimg.cc/T1sjKgMy/1.png" width="100%" />
 
 ## Integrantes
 * [Carlos Polanco](https://github.com/capolancoz)
@@ -54,9 +55,13 @@
   * ```
     git clone https://github.com/mariovasquez/Reto4_G17_React.git
     ```
-  * ```cd develop```
+  * ```
+    cd develop
+    ```
   * Crear en "/" el archivo .env.local en base a .env.template
-  * ```npm install```
+  * ```
+    npm install
+    ```
   * ```
     npm start
     ```
