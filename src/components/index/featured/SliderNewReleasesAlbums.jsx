@@ -5,7 +5,36 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import SliderAlbum from './SliderAlbum';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 const SliderNewReleasesAlbums = () => {
+    // try {
+    //     const response = await fetch('https://mariovasquez.github.io/Reto4_G17_React/src/json/albums.json');
+    //     const data = await response.json();
+    // } catch (error) {
+    //     console.log(error);
+    // }
+    // const listarAlbumes = () => {
+        const [albums, setAlbums] = useState([]);
+
+        useEffect(() => {
+            getAlbums()
+        }, [])
+
+        const getAlbums = async () => {
+            // try {
+                const response = await fetch('https://mariovasquez.github.io/Reto4_G17_React/src/json/albums.json');
+                const data = await response.json();
+            // } catch (error) {
+            //     console.log(error);
+            // }
+        }
+
+    //     return albumes;
+    // }
+
+    // const albumes = listarAlbumes();
+
     return (
         <>
             <div className="arrow__left" id="arrowLeft1">
@@ -29,14 +58,32 @@ const SliderNewReleasesAlbums = () => {
                     onSlideChange={() => console.log('slide change')}
                 >
                     <SwiperSlide>
-                        <SliderAlbum
+                        {
+                            albums.map((element, index) => {
+                                return (
+                                    `
+                                    <div className="section__featured-album-container" data-key=${index}>
+                                        <a href="#" className="section__featured-album-link">
+                                            <img id="1"
+                                                src=${element.image_url}
+                                                alt="" width="175" height="175" className="section__featured-album-img" />
+                                            <h3 className="section__featured-album-artist">${element.artist}</h3>
+                                            <p className="section__featured-album-title">${element.title}</p>
+                                        </a>
+                                        <a href="#" className="button button-text button-text--buy" id="1">Comprar</a>
+                                    </div>
+                                    `
+                                );
+                            })
+                        }
+                        {/* <SliderAlbum
                             id="1"
-                            urlImage={"https://cdn.shopify.com/s/files/1/0096/1884/9839/products/radiohead-kid-a-sister-ray_480x.jpg?v=1570377516"}
-                            artist={"Radiohead"}
-                            album={"Kid A"}
-                        />
+                            urlImage={data.image_url}
+                            artist={data.artist}
+                            album={data.title}
+                        /> */}
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <SliderAlbum
                             id="2"
                             urlImage={"https://cdn.shopify.com/s/files/1/0096/1884/9839/products/oasis20000000170887_2_480x.jpg?v=1657700137"}
@@ -91,7 +138,7 @@ const SliderNewReleasesAlbums = () => {
                             artist={"Interpol"}
                             album={"Antics"}
                         />
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
             </div>
 
