@@ -15,7 +15,6 @@
       <th>MongoDB</th>
       <th>JWT</th>
       <th>Axios</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -39,10 +38,6 @@
       <td>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="100%" />
-      </td>
-      <td>
-        <img
-          src="https://swiperjs.com/images/share-banner-3.png" width="100%" />
       </td>
     </tr>
   </tbody>
