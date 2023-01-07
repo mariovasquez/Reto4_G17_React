@@ -1,22 +1,21 @@
 # [VAO Music](https://reto4-g17.netlify.app/)
-<img src="https://i.postimg.cc/T1sjKgMy/1.png" width="100%" />
+<img src="https://postimg.cc/8FYhhFjx" width="100%" />
 
 ## Integrantes
 * [Carlos Polanco](https://github.com/capolancoz)
 * [Mario Vásquez](https://github.com/mariovasquez)
-* [Omar Ruizz](https://github.com/#)
 
 ## Tecnologías utilizadas
 <table>
   <thead>
     <tr>
-      <th>HTML</th>
-      <th>CSS</th>
-      <th>JavaScript</th>
-      <th>Sass</th>
+      <th>Node.js</th>
+      <th>Express</th>
       <th>React</th>
-      <th>Bootstrap Icons</th>
-      <th>Swiper</th>
+      <th>MongoDB</th>
+      <th>JWT</th>
+      <th>Axios</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -48,25 +47,3 @@
     </tr>
   </tbody>
 </table>
-
-## Instalación
-* Ubicarse en la carpeta que contendrá el proyecto
-* Abrir terminal de comandos
-  * ```
-    git clone https://github.com/mariovasquez/Reto4_G17_React.git
-    ```
-  * ```
-    cd develop
-    ```
-  * Crear en "/" el archivo .env.local en base a .env.template
-  * ```
-    npm install
-    ```
-  * ```
-    npm start
-    ```
-    * Levanta un servidor con la aplicación
-  * ```
-    npm run build
-    ```
-    * Genera un paquete para el despliegue en producción
