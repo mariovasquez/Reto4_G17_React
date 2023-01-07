@@ -9,10 +9,10 @@
 <table>
   <thead>
     <tr>
-      <th>Node.js</th>
+      <th>MongoDB</th>
       <th>Express</th>
       <th>React</th>
-      <th>MongoDB</th>
+      <th>Node</th>
       <th>JWT</th>
       <th>Axios</th>
     </tr>
@@ -20,24 +20,24 @@
   <tbody>
     <tr>
       <td>
-        <img src="https://i.postimg.cc/rF6WrLjr/html.png" width="100%" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" width="100%" />
       </td>
       <td>
-        <img src="https://i.postimg.cc/mgSDG9F2/css.png" width="100%" />
-      </td>
-      <td>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="100%" />
-      </td>
-      <td>
-        <img src="https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png" width="100%" />
-      </td>
-      <td>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" width="100%" />
+        <img src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png" width="100%" />
       </td>
       <td>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="100%" />
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" width="100%" />
+      </td>
+      <td>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="100%" />
+      </td>
+      <td>
+        <img src="https://miro.medium.com/max/480/1*qMC7g40mcQmeI3r-hMjY8Q.png" width="100%" />
+      </td>
+      <td>
+        <img
+          src="https://www.conviva.com/wp-content/uploads/2020/10/axios-logo-.png" width="100%" />
       </td>
     </tr>
   </tbody>
