@@ -1,5 +1,5 @@
 # [VAO Music](https://reto4-g17.netlify.app/)
-<img src="https://postimg.cc/8FYhhFjx" width="100%" />
+<img src="https://i.postimg.cc/xCftVMYj/Screenshot-1.png" width="100%" />
 
 ## Integrantes
 * [Carlos Polanco](https://github.com/capolancoz)
